@@ -23,5 +23,10 @@ while game_is_on:
     for i in car_manager.cars:
         if player.distance(i) < 22:
             game_is_on = False
+    # detecting cross
+    if player.has_crossed():
+        player.reset()
+        car_manager.level_up()
+
 
 screen.exitonclick()

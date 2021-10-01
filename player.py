@@ -13,5 +13,14 @@ class Player(Turtle):
         self.left(90)
         self.goto(STARTING_POSITION)
 
+    def reset(self):
+        self.goto(STARTING_POSITION)
+
     def move(self):
         self.forward(MOVE_DISTANCE)
+
+    def has_crossed(self):
+        if self.ycor() >= FINISH_LINE_Y:
+            return True
+        else:
+            return False
