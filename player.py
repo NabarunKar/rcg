@@ -10,6 +10,7 @@ class Player(Turtle):
         super().__init__()
         self.penup()
         self.shape("turtle")
+        self.color("white")
         self.left(90)
         self.goto(STARTING_POSITION)
 
