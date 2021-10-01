@@ -6,4 +6,12 @@ FINISH_LINE_Y = 280
 
 
 class Player(Turtle):
-    pass
+    def __init__(self):
+        super().__init__()
+        self.penup()
+        self.shape("turtle")
+        self.left(90)
+        self.goto(STARTING_POSITION)
+
+    def move(self):
+        self.forward(MOVE_DISTANCE)
